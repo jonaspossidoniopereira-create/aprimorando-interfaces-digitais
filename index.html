@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Responsividade em dispositivos móveis -->
+  <!-- Garante boa adaptação em celulares e tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Campo & Cidade 2026 — uma experiência educativa sobre a conexão entre o campo, a cidade e o futebol."
+    content="Campo & Cidade: uma experiência educativa sobre a conexão entre produção rural, tecnologia, sustentabilidade e vida urbana."
   >
 
-  <title>Campo & Cidade 2026 | O jogo que conecta o Brasil</title>
+  <title>Campo & Cidade | Conectando histórias, alimentos e futuros</title>
 
   <!-- Folha de estilos principal -->
   <link rel="stylesheet" href="style.css">
@@ -20,14 +20,17 @@
 <body>
 
   <!-- =========================================================
-       BARRA DE ACESSIBILIDADE
+       CONTROLES DE ACESSIBILIDADE
        ========================================================= -->
-  <div class="accessibility-bar" aria-label="Controles de acessibilidade">
-
+  <div
+    class="accessibility-bar"
+    role="region"
+    aria-label="Controles de acessibilidade"
+  >
     <button
+      type="button"
       id="contrastToggle"
       class="accessibility-btn"
-      type="button"
       aria-pressed="false"
       title="Ativar ou desativar alto contraste"
     >
@@ -35,516 +38,385 @@
     </button>
 
     <button
+      type="button"
+      id="fontDecrease"
+      class="accessibility-btn"
+      aria-label="Diminuir tamanho da fonte"
+    >
+      A-
+    </button>
+
+    <button
+      type="button"
       id="fontIncrease"
       class="accessibility-btn"
-      type="button"
       aria-label="Aumentar tamanho da fonte"
     >
       A+
     </button>
-
-    <button
-      id="fontDecrease"
-      class="accessibility-btn"
-      type="button"
-      aria-label="Diminuir tamanho da fonte"
-    >
-      A−
-    </button>
-
-    <span id="accessibilityFeedback" class="sr-only" aria-live="polite"></span>
   </div>
 
-
   <!-- =========================================================
-       HEADER / NAVEGAÇÃO
+       CABEÇALHO / NAVEGAÇÃO
        ========================================================= -->
-  <header class="site-header">
+  <header class="site-header" id="inicio">
     <div class="container header-content">
 
-      <a href="#inicio" class="logo" aria-label="Campo e Cidade 2026 - início">
-        <span class="logo-icon" aria-hidden="true">⚽</span>
-        <span>
-          <strong>Campo</strong>
-          <small>& Cidade 2026</small>
-        </span>
+      <a
+        href="#inicio"
+        class="logo"
+        aria-label="Campo e Cidade - voltar ao início"
+      >
+        <span class="logo-icon" aria-hidden="true">🌱</span>
+        <span>Campo<span>&</span>Cidade</span>
       </a>
 
-      <nav class="main-nav" aria-label="Navegação principal">
+      <nav
+        class="main-nav"
+        aria-label="Navegação principal"
+      >
         <a href="#problema">O desafio</a>
-        <a href="#solucao">A solução</a>
+        <a href="#solucao">Solução</a>
         <a href="#conexao">Conexão</a>
-        <a href="#galeria">Galeria</a>
+        <a href="#dados">Curiosidades</a>
+        <a href="#acao">Participe</a>
       </nav>
 
-      <a href="#cta" class="btn btn-small">Participar</a>
     </div>
   </header>
 
-
   <main>
 
-    <!-- =======================================================
+    <!-- =========================================================
          HERO
-         ======================================================= -->
-    <section id="inicio" class="hero" aria-labelledby="hero-title">
-
-      <div class="hero-background" aria-hidden="true">
-        <span class="hero-sun"></span>
-        <span class="hero-hill hero-hill-one"></span>
-        <span class="hero-hill hero-hill-two"></span>
-      </div>
-
+         ========================================================= -->
+    <section
+      class="hero"
+      aria-labelledby="hero-title"
+    >
       <div class="container hero-grid">
 
         <div class="hero-content reveal">
-          <p class="eyebrow">COPA DO MUNDO 2026 • AGRINHO</p>
+          <span class="eyebrow">Educação • Sustentabilidade • Futuro</span>
 
           <h1 id="hero-title">
-            O jogo que começa no campo
-            <span>e chega à cidade.</span>
+            Do campo que alimenta
+            <span>à cidade que transforma.</span>
           </h1>
 
-          <p class="hero-description">
-            Em 2026, o futebol nos convida a olhar além dos estádios:
-            para as pessoas, os alimentos, a natureza e as histórias
-            que conectam o campo e a cidade.
+          <p class="hero-text">
+            Você já parou para pensar em quantas histórias existem por trás
+            de um alimento que chega à sua mesa?
+          </p>
+
+          <p>
+            Campo e cidade não são mundos separados. Eles fazem parte de uma
+            mesma história — e o futuro depende de aprendermos a cuidar dessa
+            conexão.
           </p>
 
           <div class="hero-actions">
             <a href="#conexao" class="btn btn-primary">
               Descobrir essa conexão
-              <span aria-hidden="true">→</span>
             </a>
 
-            <a href="#dados" class="btn btn-outline">
-              Ver curiosidades
+            <a href="#problema" class="btn btn-secondary">
+              Conhecer o desafio
             </a>
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Ilustração de conexão entre campo e cidade">
-          <div class="football-orbit">
-            <div class="football" aria-hidden="true">⚽</div>
+        <div
+          class="hero-visual reveal"
+          aria-label="Ilustração representando a conexão entre campo e cidade"
+          role="img"
+        >
+          <div class="sun" aria-hidden="true"></div>
 
-            <span class="orbit-dot dot-one" aria-hidden="true"></span>
-            <span class="orbit-dot dot-two" aria-hidden="true"></span>
-            <span class="orbit-dot dot-three" aria-hidden="true"></span>
+          <div class="city" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
 
-          <div class="visual-card visual-card-top">
-            <span aria-hidden="true">🌱</span>
-            <strong>Campo</strong>
-            <small>Origem</small>
+          <div class="field" aria-hidden="true">
+            <span class="plant plant-1">🌱</span>
+            <span class="plant plant-2">🌾</span>
+            <span class="plant plant-3">🌱</span>
+            <span class="plant plant-4">🌾</span>
           </div>
 
-          <div class="visual-card visual-card-bottom">
-            <span aria-hidden="true">🏙️</span>
-            <strong>Cidade</strong>
-            <small>Destino</small>
+          <div class="connection-line" aria-hidden="true">
+            <span>↔</span>
           </div>
         </div>
 
       </div>
-
-      <a href="#problema" class="scroll-indicator" aria-label="Rolar para a próxima seção">
-        <span>Explore</span>
-        <span aria-hidden="true">↓</span>
-      </a>
     </section>
 
-
-    <!-- =======================================================
+    <!-- =========================================================
          PROBLEMA
-         ======================================================= -->
-    <section id="problema" class="section problem-section" aria-labelledby="problema-title">
+         ========================================================= -->
+    <section
+      class="section problem-section"
+      id="problema"
+      aria-labelledby="problem-title"
+    >
       <div class="container">
 
         <div class="section-heading reveal">
-          <span class="section-number">01</span>
+          <span class="eyebrow">O desafio</span>
 
-          <div>
-            <p class="eyebrow">O DESAFIO</p>
+          <h2 id="problem-title">
+            Quando esquecemos de onde as coisas vêm
+          </h2>
 
-            <h2 id="problema-title">
-              Às vezes esquecemos
-              <span>de onde tudo vem.</span>
-            </h2>
-
-            <p>
-              A distância entre campo e cidade pode fazer com que crianças,
-              jovens e adultos deixem de perceber a relação entre aquilo
-              que consomem e quem produz.
-            </p>
-          </div>
+          <p>
+            A distância entre campo e cidade pode ser geográfica, mas também
+            pode ser uma distância de conhecimento.
+          </p>
         </div>
 
-
-        <div id="problemCards" class="card-grid" aria-live="polite">
+        <div
+          id="problemCards"
+          class="cards-grid"
+          aria-live="polite"
+        >
           <!-- Cards inseridos dinamicamente pelo JavaScript -->
         </div>
 
       </div>
     </section>
 
-
-    <!-- =======================================================
+    <!-- =========================================================
          SOLUÇÃO
-         ======================================================= -->
-    <section id="solucao" class="section solution-section" aria-labelledby="solucao-title">
-      <div class="container">
+         ========================================================= -->
+    <section
+      class="section solution-section"
+      id="solucao"
+      aria-labelledby="solution-title"
+    >
+      <div class="container solution-grid">
 
-        <div class="split-layout">
+        <div class="solution-content reveal">
+          <span class="eyebrow">A transformação</span>
 
-          <div class="section-heading reveal">
-            <span class="section-number">02</span>
-
-            <div>
-              <p class="eyebrow">NOSSA PROPOSTA</p>
-
-              <h2 id="solucao-title">
-                Transformar a Copa em
-                <span>uma experiência de aprendizado.</span>
-              </h2>
-
-              <p>
-                Usamos o futebol como ponto de encontro para conversar sobre
-                sustentabilidade, alimentação, tecnologia, cidadania e
-                valorização de quem vive e trabalha no campo.
-              </p>
-            </div>
-          </div>
-
-
-          <div class="solution-panel reveal">
-
-            <div class="solution-icon" aria-hidden="true">🌎</div>
-
-            <h3>Aprender conectando mundos</h3>
-
-            <p>
-              Quando entendemos as relações que existem por trás de cada
-              alimento, produto e experiência, percebemos que campo e cidade
-              fazem parte do mesmo time.
-            </p>
-
-            <a href="#conexao" class="text-link">
-              Entenda como funciona →
-            </a>
-          </div>
-
-        </div>
-
-
-        <!-- Abas -->
-        <div class="tabs-container reveal">
-
-          <div
-            class="tabs"
-            role="tablist"
-            aria-label="Pilares da solução"
-          >
-            <button
-              class="tab-button active"
-              id="tab-educacao"
-              role="tab"
-              aria-selected="true"
-              aria-controls="panel-educacao"
-            >
-              Educação
-            </button>
-
-            <button
-              class="tab-button"
-              id="tab-sustentabilidade"
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-sustentabilidade"
-              tabindex="-1"
-            >
-              Sustentabilidade
-            </button>
-
-            <button
-              class="tab-button"
-              id="tab-tecnologia"
-              role="tab"
-              aria-selected="false"
-              aria-controls="panel-tecnologia"
-              tabindex="-1"
-            >
-              Tecnologia
-            </button>
-          </div>
-
-          <div class="tab-panels">
-
-            <div
-              id="panel-educacao"
-              class="tab-panel active"
-              role="tabpanel"
-              aria-labelledby="tab-educacao"
-            >
-              <h3>Conhecimento que vira atitude</h3>
-              <p>
-                A educação ajuda a transformar curiosidade em escolhas
-                conscientes e aproxima diferentes realidades.
-              </p>
-            </div>
-
-            <div
-              id="panel-sustentabilidade"
-              class="tab-panel"
-              role="tabpanel"
-              aria-labelledby="tab-sustentabilidade"
-              hidden
-            >
-              <h3>Cuidar hoje para colher amanhã</h3>
-              <p>
-                Produção responsável, preservação dos recursos naturais e
-                consumo consciente fazem parte do mesmo jogo.
-              </p>
-            </div>
-
-            <div
-              id="panel-tecnologia"
-              class="tab-panel"
-              role="tabpanel"
-              aria-labelledby="tab-tecnologia"
-              hidden
-            >
-              <h3>Tecnologia aproximando pessoas</h3>
-              <p>
-                Ferramentas digitais podem ampliar o acesso ao conhecimento
-                e revelar histórias que normalmente ficam distantes.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- =======================================================
-         CONEXÃO CAMPO-CIDADE
-         ======================================================= -->
-    <section id="conexao" class="section connection-section" aria-labelledby="conexao-title">
-      <div class="container">
-
-        <div class="section-heading centered reveal">
-          <span class="section-number">03</span>
-          <p class="eyebrow">CAMPO + CIDADE</p>
-
-          <h2 id="conexao-title">
-            Dois lados.
-            <span>Um só jogo.</span>
+          <h2 id="solution-title">
+            Conhecimento também é uma ponte.
           </h2>
 
           <p>
-            Tudo está conectado: quem planta, quem transporta, quem prepara,
-            quem vende, quem compra e quem transforma conhecimento em futuro.
+            Aproximar pessoas, histórias e saberes ajuda a construir uma
+            sociedade mais consciente sobre alimentação, sustentabilidade,
+            tecnologia e cidadania.
           </p>
+
+          <p>
+            A escola pode ser esse ponto de encontro: um espaço onde crianças
+            e jovens descobrem que cada escolha cotidiana possui impacto.
+          </p>
+
+          <a href="#acao" class="text-link">
+            Quero fazer parte dessa mudança →
+          </a>
         </div>
 
+        <div class="solution-highlight reveal">
+          <div class="highlight-icon" aria-hidden="true">💚</div>
 
-        <div class="connection-map reveal">
+          <h3>Pequenas conexões, grandes mudanças</h3>
 
-          <div class="connection-side countryside">
-            <span class="connection-emoji" aria-hidden="true">🌾</span>
-            <h3>Campo</h3>
-
-            <ul>
-              <li>Produção de alimentos</li>
-              <li>Cuidado com a terra</li>
-              <li>Conhecimento tradicional</li>
-              <li>Trabalho e inovação</li>
-            </ul>
-          </div>
-
-
-          <div class="connection-line" aria-hidden="true">
-            <span class="connection-ball">⚽</span>
-          </div>
-
-
-          <div class="connection-side city">
-            <span class="connection-emoji" aria-hidden="true">🏙️</span>
-            <h3>Cidade</h3>
-
-            <ul>
-              <li>Consumo consciente</li>
-              <li>Educação e cultura</li>
-              <li>Tecnologia</li>
-              <li>Novas oportunidades</li>
-            </ul>
-          </div>
-
-        </div>
-
-
-        <!-- Acordeão -->
-        <div class="accordion reveal">
-
-          <button
-            class="accordion-trigger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="accordion-content-1"
-          >
-            <span>Por que essa conexão importa?</span>
-            <span class="accordion-icon" aria-hidden="true">+</span>
-          </button>
-
-          <div
-            id="accordion-content-1"
-            class="accordion-content"
-            hidden
-          >
-            <p>
-              Porque nenhuma comunidade vive isolada. O campo fornece
-              recursos essenciais para a cidade, enquanto a cidade cria
-              mercados, conhecimento e oportunidades para o campo.
-            </p>
-          </div>
-
-
-          <button
-            class="accordion-trigger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="accordion-content-2"
-          >
-            <span>O que podemos fazer?</span>
-            <span class="accordion-icon" aria-hidden="true">+</span>
-          </button>
-
-          <div
-            id="accordion-content-2"
-            class="accordion-content"
-            hidden
-          >
-            <p>
-              Valorizar produtores, reduzir desperdícios, consumir com
-              consciência, aprender sobre a origem dos alimentos e
-              compartilhar conhecimento.
-            </p>
-          </div>
-
+          <p>
+            Quando entendemos a origem dos alimentos, valorizamos quem produz,
+            reduzimos desperdícios e percebemos novas possibilidades para um
+            futuro mais sustentável.
+          </p>
         </div>
 
       </div>
     </section>
 
-
-    <!-- =======================================================
-         GALERIA
-         ======================================================= -->
-    <section id="galeria" class="section gallery-section" aria-labelledby="galeria-title">
+    <!-- =========================================================
+         CONEXÃO CAMPO-CIDADE
+         ========================================================= -->
+    <section
+      class="section connection-section"
+      id="conexao"
+      aria-labelledby="connection-title"
+    >
       <div class="container">
 
         <div class="section-heading reveal">
-          <span class="section-number">04</span>
+          <span class="eyebrow">Campo + Cidade</span>
 
-          <div>
-            <p class="eyebrow">GALERIA</p>
-
-            <h2 id="galeria-title">
-              Histórias que merecem
-              <span>entrar em campo.</span>
-            </h2>
-
-            <p>
-              Espaço reservado para fotografias, ilustrações e registros
-              das comunidades participantes.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="gallery-carousel reveal">
-
-          <button
-            id="galleryPrev"
-            class="carousel-button"
-            type="button"
-            aria-label="Imagem anterior"
-          >
-            ←
-          </button>
-
-          <div
-            id="galleryTrack"
-            class="gallery-track"
-            aria-live="polite"
-          >
-            <!-- Galeria renderizada pelo JavaScript -->
-          </div>
-
-          <button
-            id="galleryNext"
-            class="carousel-button"
-            type="button"
-            aria-label="Próxima imagem"
-          >
-            →
-          </button>
-
-        </div>
-
-        <div id="galleryDots" class="carousel-dots" aria-label="Selecionar imagem"></div>
-
-      </div>
-    </section>
-
-
-    <!-- =======================================================
-         DADOS / CURIOSIDADES
-         ======================================================= -->
-    <section id="dados" class="section data-section" aria-labelledby="dados-title">
-      <div class="container">
-
-        <div class="section-heading centered reveal">
-          <span class="section-number">05</span>
-          <p class="eyebrow">VOCÊ SABIA?</p>
-
-          <h2 id="dados-title">
-            Pequenos dados,
-            <span>grandes descobertas.</span>
+          <h2 id="connection-title">
+            Uma rede onde todos têm um papel
           </h2>
+
+          <p>
+            Explore os diferentes elementos que conectam a vida rural e urbana.
+          </p>
         </div>
 
+        <!-- Sistema de abas -->
+        <div class="tabs" role="tablist" aria-label="Conexões entre campo e cidade">
 
-        <div id="dataCards" class="stats-grid reveal">
-          <!-- Dados inseridos dinamicamente -->
+          <button
+            class="tab-btn active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tab-content"
+            data-tab="campo"
+          >
+            🌾 Campo
+          </button>
+
+          <button
+            class="tab-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab-content"
+            data-tab="cidade"
+          >
+            🏙️ Cidade
+          </button>
+
+          <button
+            class="tab-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab-content"
+            data-tab="tecnologia"
+          >
+            💻 Tecnologia
+          </button>
+
+          <button
+            class="tab-btn"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab-content"
+            data-tab="sustentabilidade"
+          >
+            ♻️ Sustentabilidade
+          </button>
+
+        </div>
+
+        <div
+          id="tab-content"
+          class="tab-content reveal"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <!-- Conteúdo das abas inserido pelo JavaScript -->
         </div>
 
       </div>
     </section>
 
-
-    <!-- =======================================================
-         DEPOIMENTO
-         ======================================================= -->
-    <section class="section testimonial-section" aria-labelledby="testimonial-title">
+    <!-- =========================================================
+         GALERIA
+         ========================================================= -->
+    <section
+      class="section gallery-section"
+      id="galeria"
+      aria-labelledby="gallery-title"
+    >
       <div class="container">
 
-        <div class="testimonial reveal">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Galeria</span>
 
-          <div class="quote-mark" aria-hidden="true">“</div>
+          <h2 id="gallery-title">
+            Histórias que aproximam
+          </h2>
 
-          <p id="testimonial-title" class="testimonial-text">
-            Quando a gente entende a origem das coisas, passa a valorizar
-            muito mais as pessoas que estão por trás delas.
+          <p>
+            Espaço para fotografias, trabalhos escolares, projetos e experiências.
           </p>
+        </div>
+
+        <div
+          id="galleryGrid"
+          class="gallery-grid"
+          aria-live="polite"
+        >
+          <!-- Galeria renderizada pelo JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DADOS / CURIOSIDADES
+         ========================================================= -->
+    <section
+      class="section data-section"
+      id="dados"
+      aria-labelledby="data-title"
+    >
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Você sabia?</span>
+
+          <h2 id="data-title">
+            Dados que fazem a gente pensar
+          </h2>
+
+          <p>
+            Números podem transformar uma informação distante em uma questão
+            que faz parte da nossa realidade.
+          </p>
+        </div>
+
+        <div
+          id="dataGrid"
+          class="data-grid"
+          aria-live="polite"
+        >
+          <!-- Dados renderizados pelo JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DEPOIMENTO
+         ========================================================= -->
+    <section
+      class="section testimonial-section"
+      aria-labelledby="testimonial-title"
+    >
+      <div class="container">
+
+        <div class="testimonial-card reveal">
+
+          <span class="quote-mark" aria-hidden="true">“</span>
+
+          <h2 id="testimonial-title">
+            Educação que aproxima
+          </h2>
+
+          <blockquote>
+            Quando meus alunos perceberam que o alimento que chega à escola
+            também conta a história de uma família produtora, a relação deles
+            com a comida mudou. Eles passaram a fazer perguntas, pesquisar e
+            valorizar mais o que antes parecia invisível.
+          </blockquote>
 
           <div class="testimonial-author">
-            <div class="avatar-placeholder" aria-hidden="true">M</div>
+            <div class="avatar" aria-hidden="true">👩‍🏫</div>
 
             <div>
-              <strong>Mariana, estudante</strong>
-              <span>Participante de projeto educativo</span>
+              <strong>Professora Ana</strong>
+              <span>Educadora e incentivadora de projetos ambientais</span>
             </div>
           </div>
 
@@ -553,41 +425,46 @@
       </div>
     </section>
 
-
-    <!-- =======================================================
+    <!-- =========================================================
          CTA
-         ======================================================= -->
-    <section id="cta" class="cta-section" aria-labelledby="cta-title">
-
+         ========================================================= -->
+    <section
+      class="cta-section"
+      id="acao"
+      aria-labelledby="cta-title"
+    >
       <div class="container cta-content reveal">
 
-        <span class="cta-ball" aria-hidden="true">⚽</span>
-
-        <p class="eyebrow">AGORA É COM VOCÊ</p>
+        <span class="eyebrow">Agora é com você</span>
 
         <h2 id="cta-title">
-          Qual é o seu papel
-          <span>nesse grande time?</span>
+          Qual ponte você pode construir?
         </h2>
 
         <p>
-          Compartilhe conhecimento, valorize quem produz e ajude a construir
-          uma conexão mais forte entre campo e cidade.
+          Compartilhe uma ideia, um projeto ou uma atitude que ajude a aproximar
+          campo e cidade.
         </p>
 
-        <button id="participateButton" class="btn btn-light" type="button">
-          Quero fazer parte
-          <span aria-hidden="true">→</span>
+        <button
+          type="button"
+          class="btn btn-light"
+          id="participateBtn"
+        >
+          Quero participar 🌱
         </button>
 
-        <p id="ctaFeedback" class="cta-feedback" aria-live="polite"></p>
+        <p
+          class="feedback-message"
+          id="feedbackMessage"
+          role="status"
+          aria-live="polite"
+        ></p>
 
       </div>
-
     </section>
 
   </main>
-
 
   <!-- =========================================================
        RODAPÉ
@@ -597,34 +474,33 @@
 
       <div>
         <a href="#inicio" class="logo footer-logo">
-          <span class="logo-icon" aria-hidden="true">⚽</span>
-          <span>
-            <strong>Campo</strong>
-            <small>& Cidade 2026</small>
-          </span>
+          <span class="logo-icon" aria-hidden="true">🌱</span>
+          <span>Campo<span>&</span>Cidade</span>
         </a>
 
         <p>
-          Uma experiência educativa inspirada na conexão entre campo,
-          cidade, natureza e tecnologia.
+          Uma experiência educativa sobre pessoas, território,
+          sustentabilidade e futuro.
         </p>
       </div>
 
+      <div>
+        <h2>Explore</h2>
 
-      <nav aria-label="Links do rodapé">
-        <h3>Explore</h3>
-        <a href="#problema">O desafio</a>
-        <a href="#solucao">A solução</a>
-        <a href="#conexao">Conexão</a>
-        <a href="#galeria">Galeria</a>
-      </nav>
-
+        <nav aria-label="Links do rodapé">
+          <a href="#problema">O desafio</a>
+          <a href="#solucao">Solução</a>
+          <a href="#conexao">Conexão</a>
+          <a href="#galeria">Galeria</a>
+        </nav>
+      </div>
 
       <div>
-        <h3>Mensagem</h3>
+        <h2>Mensagem</h2>
+
         <p>
-          Educação transforma. Conexão aproxima.
-          Juntos, fazemos o futuro acontecer.
+          O futuro é construído quando aprendemos a cuidar uns dos outros
+          e do lugar onde vivemos.
         </p>
       </div>
 
@@ -633,21 +509,23 @@
     <div class="footer-bottom">
       <div class="container">
         <p>
-          © 2026 Campo & Cidade. Projeto educacional conceitual.
+          © 2026 Campo & Cidade. Projeto educativo inspirado no conceito
+          de conexão campo-cidade.
         </p>
       </div>
     </div>
   </footer>
 
-
-  <!-- =========================================================
-       LOADING OVERLAY
-       ========================================================= -->
-  <div id="loadingScreen" class="loading-screen" aria-hidden="true">
-    <div class="loading-logo" aria-hidden="true">⚽</div>
-    <span>Preparando o jogo...</span>
-  </div>
-
+  <!-- Botão flutuante para voltar ao topo -->
+  <button
+    type="button"
+    id="backToTop"
+    class="back-to-top"
+    aria-label="Voltar ao topo"
+    title="Voltar ao topo"
+  >
+    ↑
+  </button>
 
   <!-- JavaScript principal -->
   <script src="script.js" defer></script>
